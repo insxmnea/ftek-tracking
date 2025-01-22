@@ -50,6 +50,14 @@
               <label for="cargo-departure-date" class="form-label">Дата отправления</label>
               <input type="date" class="form-control" id="cargo-departure-date" required>
             </div>
+            <div class="mb-3">
+              <label for="cargo-status" class="form-label">Статус груза</label>
+              <select class="form-select" id="cargo-status" required>
+                <option value="Ожидает отправки">Ожидает отправки</option>
+                <option value="В пути">В пути</option>
+                <option value="Доставлен">Доставлен</option>
+              </select>
+            </div>
             <button type="submit" class="btn btn-primary">Создать</button>
           </form>
         </div>

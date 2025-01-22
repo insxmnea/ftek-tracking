@@ -103,11 +103,12 @@ $("#cargo-form").submit((e) => {
   const origin = $("#cargo-origin").val();
   const destination = $("#cargo-destination").val();
   const departureDate = $("#cargo-departure-date").val();
+  const status = $("#cargo-status").val();
 
   cargoList.push({
     id: `CARGO${cargoList.length + 1}`,
     name,
-    status: "Ожидает отправки",
+    status,
     origin,
     destination,
     departureDate,
