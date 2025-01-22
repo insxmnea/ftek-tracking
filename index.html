@@ -9,6 +9,53 @@
   <link rel="stylesheet" href="./styles/app.css">
 </head>
 <body>
+  <button class="btn btn-primary mb-3" id="create-cargo-btn">Создать новый груз</button>
+
+  <table class="table table-striped-columns table-bordered table-hover align-middle" id="table">
+    <thead>
+      <tr>
+        <th>Номер груза</th>
+        <th>Название груза</th>
+        <th>Статус груза</th>
+        <th>Пункт отправления</th>
+        <th>Пункт назначения</th>
+        <th>Дата отправления</th>
+      </tr>
+    </thead>
+    <tbody id="table-body" class="table-group-divider"></tbody>
+  </table>
+
+  <div class="modal fade" id="cargo-modal" tabindex="-1" aria-labelledby="cargo-modal-label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="cargo-modal-label">Создание нового груза</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="cargo-form">
+            <div class="mb-3">
+              <label for="cargo-name" class="form-label">Название груза</label>
+              <input type="text" class="form-control" id="cargo-name" required>
+            </div>
+            <div class="mb-3">
+              <label for="cargo-origin" class="form-label">Пункт отправления</label>
+              <input type="text" class="form-control" id="cargo-origin" required>
+            </div>
+            <div class="mb-3">
+              <label for="cargo-destination" class="form-label">Пункт назначения</label>
+              <input type="text" class="form-control" id="cargo-destination" required>
+            </div>
+            <div class="mb-3">
+              <label for="cargo-departure-date" class="form-label">Дата отправления</label>
+              <input type="date" class="form-control" id="cargo-departure-date" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Создать</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
   
   <script src="./plugins/bootstrap/bootstrap.min.js"></script>
   <script src="./plugins/jquery/jquery-3.7.1.min.js"></script>
