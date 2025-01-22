@@ -11,19 +11,41 @@
 <body>
   <button class="btn btn-primary mb-3" id="create-cargo-btn">Создать новый груз</button>
 
-  <table class="table table-striped-columns table-bordered table-hover align-middle" id="table">
-    <thead>
-      <tr>
-        <th>Номер груза</th>
-        <th>Название груза</th>
-        <th>Статус груза</th>
-        <th>Пункт отправления</th>
-        <th>Пункт назначения</th>
-        <th>Дата отправления</th>
-      </tr>
-    </thead>
-    <tbody id="table-body" class="table-group-divider"></tbody>
-  </table>
+  <div class="container">
+    <h3>Список грузов</h3>
+
+    <div id="filter">
+      Фильтр по статусу:
+      <select class="form-control mb-3" id="cargo-status-filter">
+        <option value="Все">
+          Все
+        </option>
+        <option value="Ожидает отправки">
+          Ожидает отправки
+        </option>
+        <option value="В пути">
+          В пути
+        </option>
+        <option value="Доставлен">
+          Доставлен
+        </option>
+      </select>
+    </div>
+
+    <table class="table table-striped-columns table-bordered table-hover align-middle" id="table">
+      <thead>
+        <tr>
+          <th>Номер груза</th>
+          <th>Название груза</th>
+          <th>Статус груза</th>
+          <th>Пункт отправления</th>
+          <th>Пункт назначения</th>
+          <th>Дата отправления</th>
+        </tr>
+      </thead>
+      <tbody id="table-body" class="table-group-divider"></tbody>
+    </table>
+  </div>
 
   <div class="modal fade" id="cargo-modal" tabindex="-1" aria-labelledby="cargo-modal-label" aria-hidden="true">
     <div class="modal-dialog">

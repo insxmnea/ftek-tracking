@@ -124,4 +124,13 @@ $("#cargo-form").submit((e) => {
   $("#cargo-departure-date").val("");
 });
 
+$("#cargo-status-filter").change(() => {
+  const status = $("#cargo-status-filter").val();
+  if (status === "Все") {
+    fillCargoTable(cargoList);
+  } else {
+    fillCargoTable(cargoList.filter((cargo) => cargo.status === status));
+  }
+});
+
 fillCargoTable(cargoList);
